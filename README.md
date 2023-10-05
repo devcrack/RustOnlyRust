@@ -79,3 +79,51 @@ A global, an immutable, constant global.
 ## Primitive Types
 
 - i32: 32 bit integer
+
+## Functions
+
+Functions are defined using the "fn" keyword. The rust style guide says
+to use snake-case for function names(my_function_name), as you could see
+lowers words separated by underscores. The functions dont have to appear 
+in the file before the code that calls them, so feel free to leave whatever you 
+want.
+
+```rust
+fn main() {
+  do_stuff();
+}
+
+fn do_stuff() {
+  
+}
+```
+
+Functions parameters are always defined with "name:type" and of course
+multiple parameters are separated by a comma. 
+Your specify the return type after the parameters by adding an arrow 
+pointing to the return type. And the body of the funcion is inside 
+a block, you return values of the function with the keywork **return**
+
+```rust
+fn do_stuff(qty: f64, oz: f64) -> f64 {
+  return qty * oz;
+}
+```
+
+If you leave the semicolon off of the last expression in a block then it wil 
+be returned as the value of the block. 
+```rust
+fn do_stuff(qty: f64, oz: f64) -> f64 {
+   qty * oz;
+}
+```
+
+This is called a "tail expression" so this: 
+```rust 
+{ return true}
+```
+
+is the same as this:
+```rust
+{ true }
+```
