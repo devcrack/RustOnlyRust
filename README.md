@@ -67,7 +67,7 @@ There are four things different about declaring a constant:
   case separated by underscores 
 - The **type** annotation is required
 - The value must be a constant expression that can be determined at compile time. A literal always works just 
-- fine.
+  fine.
 
 ```rust
 const WARP_FACTORL: f64 = 9.9;
